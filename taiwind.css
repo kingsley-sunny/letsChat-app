@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button {
+        @apply px-6 py-2 text-sm font-bold rounded-md;
+    };
+
+    .maxnull {
+        @apply max-h-0 overflow-hidden bg-yellow-400
+    };
+
+    .backgroundContainer {
+        @apply w-full h-[90vh] bg-[url('../img/image2.jpg')] bg-center bg-cover bg-blend-multiply bg-gray-700 
+    };
+
+    .cont {
+        @apply max-w-5xl mx-auto
+    };
+
+    .duplicateColor {
+        @apply bg-orange-500
+    }
+}

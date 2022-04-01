@@ -1,0 +1,36 @@
+{
+  "name": "webpack-project",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i taiwind.css -o ./src/styles.css --watch",
+    "prod": "npx tailwindcss -i taiwind.css -o ./src/styles.css --minify",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack",
+    "json:server": "json-server --watch ./src/db/db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "html-webpack-plugin": "^5.5.0",
+    "tailwindcss": "^3.0.23",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "core-js": "^3.21.1",
+    "firebase": "^9.6.9",
+    "json-server": "^0.17.0",
+    "lodash": "^4.17.21",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

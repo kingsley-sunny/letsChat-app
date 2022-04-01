@@ -1,0 +1,4 @@
+# excluding the node_modules
+node_modules
+
+src/firebase

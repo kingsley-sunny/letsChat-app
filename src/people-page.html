@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/styles.css">
+  <script src="../dist/main.bundle.js"></script>
+  
+</head>
+<body class="text-gray-200 bg-gray-700">
+    <header class=" px-4 bg-gray-600">
+        <nav class="max-w-5xl mx-auto pt-3 lg:pt-3 ">
+            <div class="flex justify-between items-center">
+                <h1 class="text-3xl">LetsChat</h1>
+                <!-- The SVG and the search icon -->
+                <div class="flex gap-x-2 items-center">
+                    <div id="person-container" class=" ">
+                        <div id="person-image-container" class="w-10 h-10 ring-2 ring-green-500 rounded-full overflow-hidden ">
+                            <img id="person-image" src="" alt="the user profile image" class="w-10 h-10 rounded-full ">
+                        </div>
+                        <p id="person-name" class="text-sm text-gray-200"></p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                </div>
+            </div>
+
+            <ul class="flex justify-between mt-10">
+                <a href="chat-home-page.html" class="text-center w-full ">Chats</a>
+                <a id="people-page" href="people-page.html" class="text-center w-full ">people</a>
+            </ul>
+
+            <div class="flex justify-between mt-2">
+                <span href="" class="w-full"></span>
+                <span href="" class="h-1 w-full bg-green-500"></span>
+            </div>
+
+        </nav>
+
+        
+    </header>
+
+    <section>
+        <div id="people-container" class="max-w-5xl mx-auto grid lg:grid-cols-3 gap-4">
+            <!-- The people Container -->
+            <div id="" class="w-full py-4 lg:py-8 lg:max-w-xs flex justify-between items-center lg:flex-col lg:shadow-xl">
+                <!-- The image and the name container -->
+                <div class="flex gap-x-2 items-center justify-center lg:block">
+                    <!-- The image -->
+                    <div id class="w-24 h-24 lg:w-32 lg:h-32 rounded-full ring-green-500 ring-2 overflow-hidden">
+                        <img id="" src="" class="w-full h-full object-fit ">
+                    </div>
+
+                    <!-- The Description -->
+                    <div class="space-y-2">
+                        <h2 id="" class="lg:text-center text-2xl font-bold">boss EKC</h2>
+                        <p id="" class="lg:text-center text-sm">Ezeobi Kingsley Sunny</p>
+                    </div>
+                </div>
+
+                <!-- The chat and the add friend container -->
+                <div class="flex gap-x-4 lg:mt-4">
+                    <button id="" class="px-4 py-2 uppercase rounded-lg bg-green-500">chat </button>
+                    <button id="" class="px-4 py-2 uppercase rounded-lg bg-orange-500">add friend</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

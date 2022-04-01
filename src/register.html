@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <script src="../dist/main.bundle.js"></script>
+</head>
+<body>
+    <body class="text-gray-200 bg-gray-700 overflow-hidden">
+        <header class="bg-green-500 text-gray-700 px-4">
+            <nav class="max-w-5xl py-3 lg:py-3 mx-auto flex justify-between items-center">
+                <h1 class="text-3xl">LetsChat</h1>
+        </header>
+    
+        <!-- This is the form section -->
+        <section class="py-16 w-full">
+            <div id="register-slider" class="flex gap-x-2 w-[200%]">
+    
+                <!-- The register section -->
+                <div id="register-section" class=" space-y-6 px-4 w-full">
+                    <!-- <div id= "show-error" class="text-white bg-red-500 p-4 max-w-5xl mx-auto rounded">
+                        email has already been used
+                    </div> -->
+                    <h2 id="register-header" class="text-4xl text-center capitalize text-gray-200 ">Register your account</h2>
+        
+                    <div action="" id="register-form" class="cont grid lg:grid-cols-2 gap-x-4 gap-y-4">
+                        <input required type="text" placeholder="Fullname" name="Fullname" id="register-fullname" class="w-full py-3 text-gray-700 px-4 bg-gray-100 border-gray-400  outline-green-500 rounded-md lg:col-span-1">
+                        
+                        <input required type="email" placeholder="Email" name="email" id="register-email" class="w-full py-3 text-gray-700 px-4 bg-gray-100 border-gray-400  outline-green-500 rounded-md lg:col-span-1">
+            
+                        <input required type="text" placeholder="Username" name="username" id="register-username" class="w-full py-3 text-gray-700 px-4 bg-gray-100 border-gray-400  outline-green-500 rounded-md lg:col-span-1">
+            
+                        <input required type="password" name="password" placeholder="Password" id="register-password" class="w-full py-3 text-gray-700 px-4 bg-gray-100 border-gray-400  outline-green-500 rounded-md lg:col-span-1">
+            
+                        <button id="registerBtn" class="button py-3
+                         text-gray-200 text-center uppercase cursor-pointer flex justify-center items-center lg:col-span-2 bg-green-500 hover:bg-green-600 rounded-md">submit</button>
+                        
+                    </div>
+    
+                    <p class="text-center text-gray-200">already registered <span id="already-registered-btn" class="underline cursor-pointer">click here</span></p>
+                </div>
+                
+                <!-- The login section -->
+                <div id="login-section" class=" space-y-6 px-4 w-full">
+                    <h2 id="login-header" class="text-4xl text-center capitalize text-gray-200 ">Login to your account</h2>
+        
+                    <form action="./chat-home-page.html" id="login-form" class="cont grid max-w-xl  gap-y-4">
+                        
+                        <input required type="email" name="email" placeholder="Email" id="login-email" class="w-full py-3 text-gray-700 px-4 bg-gray-100 border-gray-400  outline-green-500 rounded-md ">
+            
+                        <input required type="password" placeholder="Password" name="password" id="login-password" class="w-full py-3 text-gray-700 px-4 bg-gray-100 border-gray-400  outline-green-500 rounded-md">
+            
+                        <button id="login-btn" class="flex justify-center items-center button py-3
+                         text-gray-200 text-center uppercase cursor-pointer bg-green-500 hover:bg-green-600 rounded-md">submit</button>
+                        
+                    </form>
+    
+                    <p id="not-yet-register-btn" class="text-center text-gray-200">don't have an account yet <span id="already-registered-btn" class="underline cursor-pointer">click here</span></p>
+                </div>
+            </div>
+        </section>
+    
+    </body>
+</body>
+</html>

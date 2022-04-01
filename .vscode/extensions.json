@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "ms-vscode.vscode-typescript-next",
+        "xabikos.javascriptsnippets",
+        "visualstudioexptteam.vscodeintellicode",
+        "tabnine.tabnine-vscode"
+    ]
+}
