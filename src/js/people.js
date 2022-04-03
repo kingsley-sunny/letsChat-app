@@ -28,10 +28,14 @@ export class People {
 
     linkToChatUser(e){
         if(e.target.id === 'chat-btn'){
+            console.log('jdj')
             const username = e.target.parentElement.previousElementSibling.children[1].children[0].textContent;
             const id = e.target.parentElement.parentElement.id.split('-')[1];
-            console.log({id: id, username: username})
-            storage.store({id: id, username: username}, 'chatRequest');
+            const image = e.target.parentElement.previousElementSibling.children[0].children[0].src
+            
+            console.log({id: id, username: username, image: image})
+            storage.store({id: id, username: username, image: image}, 'chatRequest');
+
             window.location = 'chat-person.html';
         }
     }
