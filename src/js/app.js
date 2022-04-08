@@ -4,7 +4,7 @@ import nav from "./navCtrl";
 import { registerSlider, collectRegistrationDetails, registerAndLoginUser } from "./registerAndlogin";
 import login from "./login";
 import {getPeople, getUser, linkToChatUser} from './people';
-import {getPersonChattingWith, sendMsg, getMsgs} from "./chat.js";
+import {getPersonChattingWith, sendMsg, getMsgs, getAllUserChatsHistory} from "./chat.js";
 import profileClass from "./profile.js"
 
 class LetsChat {
@@ -75,10 +75,24 @@ class LetsChat {
           },
         });
 
+
+
+        // To get all the users chat chatHistory
+        htmlDomElement(document.querySelector("#chat-history-container"), {
+            domLoaded: () => {
+              if (!mainUser) {
+                window.location = "register.html";
+                return null;
+              }
+              getAllUserChatsHistory(mainUser)
+            },
+          });
+
         // Link to the chat page
         htmlDomElement(document.querySelector("#people-container"), {
           eventName: "click",
           eventHandler: (e) => {
+            e.preventDefault();
             linkToChatUser(e);
           },
         });
@@ -86,7 +100,7 @@ class LetsChat {
         // Get the person chatting with details
         htmlDomElement(document.querySelector("#chat-home"), {
           domLoaded: () => {
-            getPersonChattingWith();
+            getPersonChattingWith(mainUser);
           },
         });
 

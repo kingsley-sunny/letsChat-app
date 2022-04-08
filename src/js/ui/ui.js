@@ -24,12 +24,12 @@ class UI {
         
                     <!-- The chat and the add friend container -->
                     <div class="flex gap-x-2 lg:mt-4 px-2">
-                        <button href="chat-person.html" id="chat-btn" class="px-2 py-2 lg:px-4 lg:py-2   text-xs uppercase font-bold rounded-lg bg-green-500">
-                            <p class="hidden lg:block">chat</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <a href="chat-person.html" id="chat-btn" name="${res.username}" uid="${res.id}" photo="${res.photoURL}" class="px-2 py-2 lg:px-4 lg:py-2 text-xs uppercase font-bold rounded-lg bg-green-500">
+                            <p id="chat-btn" name="${res.username}" uid="${res.id}" photo="${res.photoURL}" class="hidden lg:inline">chat</p>
+                            <svg id="chat-btn" name="${res.username}" uid="${res.id}" photo="${res.photoURL}" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                             </svg>
-                         </button>
+                         </a>
                         <button id="add-friend-${user.id}" class="px-2 py-2 lg:px-4 lg:py-2  text-xs uppercase font-bold rounded-lg bg-orange-500"> 
                             <p class="hidden lg:block">add friend</p>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 lg:hidden" viewBox="0 0 20 20" fill="currentColor">
@@ -91,7 +91,7 @@ class UI {
                     <p class="">${msg.msg}</p>
                     <div class="flex mt-8 flex-col justify-end items-end">
                         <span class="text-xs">${new Date(msg.time.toDate()).toUTCString()}</span>
-                        <span class="">sent</span>
+                        <span class="msgStatus">${msg.status || 'sending.....'}</span>
                     </div>
                 </div>
             </div>

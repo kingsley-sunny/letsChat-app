@@ -1,11 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../src/styles.css">
   <script src="../dist/main.bundle.js"></script>
-  
+  <title>chat-history</title>
 </head>
 <body class="text-gray-200 bg-gray-700">
     <header class=" px-4 bg-gray-600">
@@ -21,7 +21,10 @@
             </div>
 
             <ul class="flex justify-between mt-10">
-                <a id="" href="chat-home-page.html" class="text-center w-full ">Chats</a>
+                <a id="" href="chat-home-page.html" class="text-center w-full flex justify-center items-center gap-x-2">
+                    Chats
+                    <span id="chat-notification" class="bg-green-500 flex justify-center items-center text-center w-8 h-8 rounded-full">1</span>
+                </a>
                 <a id="people-page" href="people-page.html" class="text-center w-full ">people</a>
             </ul>
 
@@ -35,25 +38,25 @@
         
     </header>
 
-    <section>
-        <div class="max-w-5xl mx-auto">
-            <a href="" class="py-4 border-2 block w-full overflow-hidden">
-                <div class="flex justify-between gap-x-2 ">
-                    <div class="flex items-center gap-x-3">
-                        <div class="w-12 h-12 lg:w-16 lg:h-16 rounded-full overflow-hidden border">
-                            <img src="" alt="profie-image" class="w-full h-full">
+    <section id="chat-history-container">
+        <div class="max-w-5xl mx-auto px-4 lg:px-0">
+            <a href="" class="py-4 block w-full">
+                <div class="flex justify-between ">
+                    <div class="flex items-center gap-x-2">
+                        <div class="overflow-hidden flex justify-center items-center rounded-full min-w-[3rem] min-h-[3rem] w-12 h-12 lg:min-w-[4rem] lg:min-h-[4rem] lg:w-16 lg:h-16 border">
+                            <img src="" alt="profie-image" class="w-full h-full inline-block">
                         </div>
-                        <div class="overflow-hidden">
-                            <h2 class="text-xl lg:text-2xl w-full">${res.username}</h2>
-                            <p class="max-w-4xl text-ellipsis whitespace-nowrap min-w-0 overflow-hidden">
+                        <div class=" space-y-2">
+                            <h2 class="text-xl lg:text-2xl w-full text-ellipsis overflow-hidden max-w-[300px]">${res.username}</h2>
+                            <p style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;" class="overflow-hidden  ">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos et culpa placeat fuga esse magni iste adipisci rem! Beatae delectus impedit culpa fugiat amet! Odio asperiores doloremque in sint totam?
                             </p>
                         </div>
                     </div>
 
-                    <div class="">
+                    <div class="space-y-2">
                         <p class="text-xs">2/03/12</p>
-                        <p class="bg-green-500 text-center text-gray-700 rounded-full p-2 mt-1.5">3</p>
+                        <p class="bg-green-500 flex justify-center items-center text-center w-8 h-8 rounded-full"> 3 </p>
                     </div>
                 </div>
             </a>

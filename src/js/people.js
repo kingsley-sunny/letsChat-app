@@ -1,11 +1,12 @@
-import { collection, getDocs } from "firebase/firestore";
-import {usersRef} from "../firebase/firebase"
+import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
+import {usersRef, db} from "../firebase/firebase"
 import { renderPeopleToUI, showUserLoggedIn } from "./ui/ui";
 import storage from "./localStorage/storage"
 
 export class People {
     getUser(userName){
-        showUserLoggedIn(userName)
+        showUserLoggedIn(userName);
+        updateDoc(doc(db, 'users', userName.uid), {chatRequest: ""})
     }
     getPeople(exceptUser) {
         
@@ -28,15 +29,16 @@ export class People {
 
     linkToChatUser(e){
         if(e.target.id === 'chat-btn'){
-            console.log('jdj')
-            const username = e.target.parentElement.previousElementSibling.children[1].children[0].textContent;
-            const id = e.target.parentElement.parentElement.id.split('-')[1];
-            const image = e.target.parentElement.previousElementSibling.children[0].children[0].src
-            
-            console.log({id: id, username: username, image: image})
-            storage.store({id: id, username: username, image: image}, 'chatRequest');
+            e.preventDefault();
 
-            window.location = 'chat-person.html';
+            console.log('jdj')
+            const username = e.target.getAttribute('name');
+            const uid = e.target.getAttribute('uid');
+            const image = e.target.getAttribute('photo');
+            console.log({id: uid, username: username, image: image})
+            storage.store({id: uid, username: username, image: image}, 'chatRequest');
+
+            window.location = 'chat-person.html';                        
         }
     }
 }
