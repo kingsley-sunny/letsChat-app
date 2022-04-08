@@ -163,7 +163,7 @@ class RegisterAndLoginUser {
                         fullname: formFullname,
                         id: uid,
                         password: formPassword,
-                        photoURL: '',
+                        photoURL: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
                         recentReceivedMsg: {from: '', msg: ''},
                         recentSentMsg: {to: '', msg: ''},
                         username: createdUser.user.displayName,
