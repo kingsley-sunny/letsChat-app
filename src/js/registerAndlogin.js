@@ -173,7 +173,7 @@ class RegisterAndLoginUser {
                     const usersDetailsRef = doc(db, 'users', uid);
                     const newUserDetails = await setDoc(usersDetailsRef, userDetails);
                     console.log(newUserDetails);
-                    window.location = 'chat-home-page.html';
+                    window.location = 'people-page.html';
         
                     console.log(userFriends);
                 } else{

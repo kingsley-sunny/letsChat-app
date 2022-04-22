@@ -33,7 +33,7 @@ class Login {
             // console.log(Auth)
             
             signInWithEmailAndPassword(auth, details.email, details.password).then((res, err) => {
-                window.location = "chat-home-page.html"
+                window.location = "people-page.html"
             }).catch(err => {
                 message.showError(
                     "#login-header",
