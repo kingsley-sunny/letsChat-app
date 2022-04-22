@@ -27,7 +27,8 @@ class Chats {
         // })
     }
     getPersonChattingWith(user){
-        const get = storage.get('chatRequest')
+        const get = storage.get('chatRequest');
+        getDoc(doc(db, 'users', user))
         showPersonChattingWithDetails(get);
         updateDoc(doc(db, 'users', user.uid), {chatRequest: get.id})
     }
