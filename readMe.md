@@ -1,13 +1,6 @@
-Things to do for the chat
-1.  Do the sign in and the sign out authentication 
-2.  Do the create user authentication
-3.  Make the user database 
+<h1> LetSchat App</h1>
 
+<p>This app is done with Tailwind, vanilla JavaScript and firebase, Using vanillas JavaScript to build a chat app. </p>
+<i>Click on this button to check the live demo </i>
 
-
-What we need from the user
-1. display name
-2. email
-3. password
-4. all the meta data Objects
-5. username
+<a>view demo</a>
